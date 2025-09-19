@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+              url("./image/background.png") center/cover no-repeat;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #6c63ff, #48c6ef);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Main */
+.title {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #6c63ff;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-info h2 {
+  color: #6c63ff;
+  margin-bottom: 15px;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #6c63ff, #48c6ef);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
