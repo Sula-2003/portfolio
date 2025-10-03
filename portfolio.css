@@ -1,99 +1,28 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html,body{
-    width: 100%;
-    height: 100%;
-}
-header{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.btn1{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: white;
-}
-.btn1:hover{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: black;
-    color: white;
-}
-.btn3{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: white;
-}
-.btn3:hover{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: black;
-    color: white;
-}
-.btn2{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: white;
-}
-.btn2:hover{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: black;
-    color: white;
-}
-main{
-    margin: auto;
-    width: 100%;
-    height: 90%;
-    background-image: url("./image/background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-main img{
-    margin: 10px;
-}
-#project{
-    display: flex;
-    justify-content: flex-start;
-} */
- /* Import a modern font */
-
+/* Import a modern font */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #f8f9fa;
+    color: #222222; /* Primary text color */
+    background-color: #f8f9fa; /* Light neutral background */
+    margin: 0;
+    padding: 0;
 }
 
-/* Header improvements */
+/* Header styling */
 header {
-    background-color: #ffffffcc; /* subtle transparent white */
+    background-color: #f0f4ffcc; /* subtle transparent light blue */
     backdrop-filter: blur(6px);
     position: sticky;
     top: 0;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 10vh;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Buttons refined */
+/* Header buttons */
 header button {
     width: 120px;
     height: 45px;
@@ -119,38 +48,88 @@ main {
     justify-content: center;
     text-align: center;
     padding: 40px 20px;
+    position: relative;
+    min-height: 90vh;
     background-image: url("./image/background.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
+/* Overlay for better readability */
+main::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(248, 249, 250, 0.6); /* subtle overlay */
+    z-index: -1;
+}
+
 /* Profile image styling */
 main img {
     border-radius: 50%;
-    border: 5px solid #6c63ff;
+    border: 5px solid #6c63ff; /* matches button accent */
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
+
 main img:hover {
     transform: scale(1.05);
 }
 
-/* Text styling */
+/* Headings */
 main h1 {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 2.5rem;
-    color: #222;
+    color: #222222;
 }
+
 main h2 {
     margin-top: 15px;
     font-size: 1.5rem;
-    color: #6c63ff;
+    color: #6c63ff; /* accent color for headings */
 }
+
+/* Paragraphs */
 main p {
     margin-top: 10px;
     max-width: 600px;
     line-height: 1.6;
     font-size: 1rem;
-    color: #555;
+    color: #555555; /* secondary text */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header button {
+        margin: 5px 0;
+    }
+
+    main img {
+        width: 200px;
+        height: 220px;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.2rem;
+    }
+
+    main p {
+        font-size: 0.95rem;
+    }
 }
