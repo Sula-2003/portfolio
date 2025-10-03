@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+  background: 
               url("./image/background.png") center/cover no-repeat;
   color: #333;
   min-height: 100vh;
@@ -112,5 +112,24 @@ header button:hover {
 
 .contact-form button:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.email-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 40px;
+  background: white;
+  color: #6c63ff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.email-btn:hover {
+  background: #6c63ff;
+  color: white;
+  transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
